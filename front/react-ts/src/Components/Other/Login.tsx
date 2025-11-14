@@ -7,18 +7,6 @@ interface Credentials {
   password: string;
 }
 
-interface Prof {
-    username: string;
-    role: string;
-    profile: {
-        firstName: string;
-        lastName: string;
-        email: string;
-    };
-    currency: number | null;
-    resetPassword: boolean;
-}
-
 const Login: React.FC = () => {
   const navigate = useNavigate();
   const roleRef = useRef("");

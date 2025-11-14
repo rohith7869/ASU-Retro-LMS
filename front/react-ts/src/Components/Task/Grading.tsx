@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "nes.css/css/nes.min.css";
 import StudentPoints from "./StudentPoints";
 

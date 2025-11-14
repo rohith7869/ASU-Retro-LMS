@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import TransactionBadge from './TransactionBadge';
 import Loader from '../Other/Loader';
 import { Item } from './Items';
 import coin from './spinningCoin.gif'
@@ -62,7 +61,7 @@ const ItemCard: React.FC<ItemProps> = ({ item, role, handleItemDescription, hand
             setLoading(false);
         }
         
-    }, []);
+    });
 
     
 

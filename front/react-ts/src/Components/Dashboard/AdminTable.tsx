@@ -3,7 +3,7 @@ import axios from "axios";
 import "./AdminTable.css";
 import AddInstructorForm from "./AddInstructorForm";
 import Modal from "./Modal";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 export interface Instructor {
   firstName: string;
@@ -41,15 +41,6 @@ const handleAddOrUpdateInstructor = (instructor: Instructor) => {
   setIsModalOpen(false);  // Close the modal after submission
 };
 
-const openAddModal = () => {
-  setCurrentInstructor(null);  // Reset any previously selected instructor data
-  setIsModalOpen(true);
-};
-
-const openEditModal = (instructor: Instructor) => {
-  setCurrentInstructor(instructor);
-  setIsModalOpen(true);
-};
 
   useEffect(() => {
     fetchInstructors();

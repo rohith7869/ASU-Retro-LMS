@@ -77,7 +77,7 @@ const NotificationList:React.FC<NotificationProps> = ({role, courseId}) => {
     useEffect(() => {
         fetchNotifications();
         // updateStatus();
-    }, []);
+    });
 
     const renderLoader = () => (
         <div style={{

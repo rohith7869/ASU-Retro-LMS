@@ -1,8 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import StudentData from './Student';
-import Loader from '../Other/Loader';
 import axios from 'axios';
-import { render } from '@testing-library/react';
 interface StudentProps {
     courseId: string;
 }

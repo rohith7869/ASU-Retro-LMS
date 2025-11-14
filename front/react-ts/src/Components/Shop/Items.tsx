@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "nes.css/css/nes.min.css";
@@ -62,7 +61,7 @@ const Items: React.FC<ItemProps> = ({ role, courseId, studentBalance, fullName }
       };
   
       fetchItems();
-    }, [updateItems]);
+    }, [updateItems, courseId]);
 
     const renderLoader = () => 
        (

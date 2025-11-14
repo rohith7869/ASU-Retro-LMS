@@ -54,7 +54,7 @@ const Dashboard: React.FC = () => {
     };
 
     checkAuthentication();
-  }, []);
+  });
     useEffect(() => {
       const checkProfile = async () => {
         try {
@@ -213,7 +213,7 @@ const Dashboard: React.FC = () => {
             position: 'fixed',
             width: '21vh',
           }}>
-             <img src={asulogo} />
+             <img src={asulogo} alt="asulogo"/>
               {sidebarItems.map(sidebarItem =>
                   <SidebarItem key={sidebarItem.name} name={sidebarItem.name} onClick={handleIconClick} role={role}/>
               )}

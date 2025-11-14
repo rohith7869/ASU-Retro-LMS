@@ -57,7 +57,7 @@ const Tasks: React.FC<TaskProps> = ({courseId, role}) => {
       fetchTasks();
       setUpdateTask(false);
     }
-  }, [updateTask]); // The empty dependency array ensures that this effect runs only once when the component mounts
+  }, [updateTask, courseId]); // The empty dependency array ensures that this effect runs only once when the component mounts
   return (
       
           <TaskList tasks={tasks} courseName={courseName} courseId = {courseId} updateTasks = {handleUpdateTask} role = {role}/> 
