@@ -1,0 +1,11 @@
+{
+  "front/react-ts/src/**/*.{ts,tsx,js,jsx}": [
+    "prettier --write"
+  ],
+  "back/**/*.js": [
+    "prettier --write"
+  ],
+  "*.{json,md,css,scss}": [
+    "prettier --write"
+  ]
+}

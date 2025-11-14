@@ -3,3 +3,22 @@ back/node_modules
 back/.vscode/
 
 **/node_modules
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Build outputs
+build/
+dist/
+
+# Env files
+.env
+*.env
+back/.env
+front/.env
+
+# Logs
+logs/
+*.log
