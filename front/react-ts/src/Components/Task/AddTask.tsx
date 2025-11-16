@@ -11,12 +11,14 @@ interface AddTaskProps {
 
 const AddTask: React.FC<AddTaskProps> = ({showTaskList, courseId, update}) => {
     const [title, setTitle] = useState('');
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [deadline, setDeadline] = useState('');
     const [details, setDetails] = useState('');
     const [point, setPoint] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     // Use useLocation to access navigation state
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const location = useLocation();
     // Extract courseId from location state
     // const {courseId} = location.state||{};

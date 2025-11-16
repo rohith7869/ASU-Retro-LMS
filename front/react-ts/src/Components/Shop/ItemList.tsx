@@ -8,7 +8,6 @@ import ItemCard from './ItemCard';
 import './ItemCard.css';
 import RequestList from './RequestList';
 import io from "socket.io-client";
-import { send } from 'process';
 
 const coin = require('./spinningCoin.gif')
 

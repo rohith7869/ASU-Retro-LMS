@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "nes.css/css/nes.min.css";
@@ -26,8 +25,8 @@ const Items: React.FC<ItemProps> = ({ role, courseId, studentBalance, fullName }
     const [loading, setLoading] = React.useState<boolean>(true);
     // const [courseName, setCourseName] = useState<string>('SER517');
     // const [role, setRole] = useState<string>('');
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const navigate = useNavigate();
-
     const [updateItems, setUpdateItems] = useState<boolean>(false);
 
 
@@ -62,7 +61,7 @@ const Items: React.FC<ItemProps> = ({ role, courseId, studentBalance, fullName }
       };
   
       fetchItems();
-    }, [updateItems]);
+    }, [updateItems, courseId]);
 
     const renderLoader = () => 
        (

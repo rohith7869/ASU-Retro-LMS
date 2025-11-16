@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname "$0")/h"
+
+echo "🧪 Running backend tests before push..."
+cd back && npm test --if-present || exit 1
+
+echo "🧪 Running frontend tests before push..."
+cd ../front/react-ts && npm test --if-present || exit 1

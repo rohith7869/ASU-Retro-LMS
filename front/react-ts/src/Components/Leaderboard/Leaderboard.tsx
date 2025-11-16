@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Loader from "../Other/Loader";
-import { render } from "@testing-library/react";
-// import './Leaderboard.css';
 
 interface LBProps {
   courseId: string;
@@ -58,7 +56,7 @@ const Leaderboard: React.FC<LBProps> = ({courseId}) => {
       }
     };
     fetchStudents();
-  }, []); 
+  });
 
 const renderLeaderboard = () => {
   return (

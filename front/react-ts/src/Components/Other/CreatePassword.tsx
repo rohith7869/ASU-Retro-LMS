@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; 
+import React, { useEffect, useState } from 'react';
 import './CreatePassword.css';
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const CreatePassword: React.FC = (props) => {
     const navigate = useNavigate();
     const location = useLocation();
     const data = location.state;
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         if (!data) {
             navigate('/login');
@@ -41,7 +41,7 @@ const CreatePassword: React.FC = (props) => {
 
             checkAuth();
         }
-    }, []);
+    });
 
     const updatePassword = async () => {
         const passwordRegex = /^(?=.*[!@#$%^&*])(?=.*[0-9].*[0-9]).{8,}$/; // Regex for password format

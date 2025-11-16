@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "nes.css/css/nes.min.css";
-// import "./TaskDescription.css";
 import DeletePrompt from "./DeletePrompt";
 import Grading from "./Grading";
 import Loader from "../Other/Loader";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import * as XLSX from 'xlsx';
 
@@ -36,6 +35,7 @@ const TaskDescription: React.FC<TaskDescriptionProps> = ({
 }) => {
   const [title, setTitle] = useState(task.title);
   const [details, setDetails] = useState(task.details);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [deadline, setDeadline] = useState(task.deadline);
   const [point, setPoint] = useState(task.point + "");
   const [errorMessage, setErrorMessage] = useState("");
@@ -69,7 +69,7 @@ const TaskDescription: React.FC<TaskDescriptionProps> = ({
     };
     fetchStudents();
 }
-, []); 
+);
 
   useEffect(() => {
     const getGrades = async () => {

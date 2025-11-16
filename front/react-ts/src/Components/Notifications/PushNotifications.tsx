@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import io from "socket.io-client";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -45,7 +45,7 @@ const PushNotification:React.FC<NotificationProps> = ({courseId, role, IDs}) => 
     return () => {
       socket.disconnect();
     };
-  }, [courseId, role]);
+  }, [courseId, role, IDs.studentId]);
 
 
   return (

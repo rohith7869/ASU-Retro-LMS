@@ -1,5 +1,5 @@
-import { CircleUser, LogOut, LucideIcon, LucideProps, X } from 'lucide-react'
-import React, { useEffect } from 'react'
+import { X } from 'lucide-react'
+import React from 'react'
 import {useState, useRef } from 'react'
 import './CoursesSidebar.css'
 import { Course } from '.'
