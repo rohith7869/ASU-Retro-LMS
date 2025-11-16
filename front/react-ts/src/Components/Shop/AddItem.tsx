@@ -12,6 +12,7 @@ const AddItem: React.FC<AddItemProps> = ({courseId, update, handleBack}) => {
   const [itemName, setItemName] = useState<string>('');
   const [itemDescription, setItemDescription] = useState<string>('');
   const [itemPrice, setItemPrice] = useState<number>(0);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [itemExpiry, setItemExpiry] = useState<number>(0);
   const [errorMeessege, setErrorMeessege] = useState<string>('');
 

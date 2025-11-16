@@ -20,7 +20,7 @@ const NotificationList:React.FC<NotificationProps> = ({role, courseId}) => {
     const [notifications, setNotifications] = useState<Notification[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [updateNotifications, setUpdateNotifications] = useState<boolean>(false);
-
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const updateNotificationList = () => {
         setUpdateNotifications(!updateNotifications);
     }
@@ -40,7 +40,7 @@ const NotificationList:React.FC<NotificationProps> = ({role, courseId}) => {
                 });
 
                 if (!response.ok) {
-                    
+
                 }
                 const notifications: Notification[] = await response.json();
                 setNotifications(notifications);
@@ -76,7 +76,7 @@ const NotificationList:React.FC<NotificationProps> = ({role, courseId}) => {
 
     useEffect(() => {
         fetchNotifications();
-        // updateStatus();
+        updateStatus();
     });
 
     const renderLoader = () => (
@@ -104,7 +104,7 @@ const NotificationList:React.FC<NotificationProps> = ({role, courseId}) => {
                 </div>
             </div>
     );
-    
+
     const renderNotifications = () => (
         <>
             <div className=''>

@@ -35,6 +35,7 @@ const TaskDescription: React.FC<TaskDescriptionProps> = ({
 }) => {
   const [title, setTitle] = useState(task.title);
   const [details, setDetails] = useState(task.details);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [deadline, setDeadline] = useState(task.deadline);
   const [point, setPoint] = useState(task.point + "");
   const [errorMessage, setErrorMessage] = useState("");

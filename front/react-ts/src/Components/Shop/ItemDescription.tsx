@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
 import 'nes.css/css/nes.min.css';
 import './ItemDescription.css'; // Import custom styles
@@ -28,11 +29,13 @@ const ItemDescription: React.FC<ItemDescriptionProps> = ({selectedItem:item, upd
   const [isDeleating, setIsDeleating] = useState(false);
   const [title, setTitle] = useState(item?.itemName);
   const [description, setdescription] = useState(item?.itemDescription);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [expiry, setExpiry] = useState(item?.itemExpiry);
   const [price, setPrice] = useState(item?.itemPrice+"");
   const [errorMessage, setErrorMessage] = useState('');
   const [transaction, setTransaction] = useState<Transaction|null>(null);
   const [openRequests, setOpenRequests] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [loading, setLoading] = useState(true);
 
   const handleEditMode = () => {
@@ -84,7 +87,7 @@ const ItemDescription: React.FC<ItemDescriptionProps> = ({selectedItem:item, upd
       }
     }
   };
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleBuyRequest = async (selectedItem = item) => {
     try {
       const response = await fetch("http://localhost:8080/requestItem", {
@@ -134,7 +137,7 @@ const getTransction = async () => {
       setLoading(false);
     }
   };
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (role === 'student') {
       getTransction();

@@ -14,7 +14,7 @@ const CreatePassword: React.FC = (props) => {
     const navigate = useNavigate();
     const location = useLocation();
     const data = location.state;
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         if (!data) {
             navigate('/login');

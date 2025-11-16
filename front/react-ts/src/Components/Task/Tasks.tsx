@@ -20,6 +20,7 @@ interface TaskProps {
 const Tasks: React.FC<TaskProps> = ({courseId, role}) => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [updateTask, setUpdateTask] = useState<boolean>(true);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [courseName, setCourseName] = useState<string>('');
   // const [role, setRole] = useState<string>('');
 

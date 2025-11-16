@@ -23,6 +23,7 @@ interface Transaction {
 
 
 const ItemCard: React.FC<ItemProps> = ({ item, role, handleItemDescription, handleItemRequest, handleItemBuy, studentBalance }) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [transaction, setTransaction] = useState<Transaction|null>(null);
     const [transactionState, setTransactionState] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(true);
@@ -52,7 +53,7 @@ const ItemCard: React.FC<ItemProps> = ({ item, role, handleItemDescription, hand
                     setLoading(false);
                 }
             };
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         
         if (role === 'student') {

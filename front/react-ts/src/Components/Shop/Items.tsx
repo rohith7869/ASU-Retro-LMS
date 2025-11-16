@@ -25,8 +25,8 @@ const Items: React.FC<ItemProps> = ({ role, courseId, studentBalance, fullName }
     const [loading, setLoading] = React.useState<boolean>(true);
     // const [courseName, setCourseName] = useState<string>('SER517');
     // const [role, setRole] = useState<string>('');
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const navigate = useNavigate();
-
     const [updateItems, setUpdateItems] = useState<boolean>(false);
 
 
